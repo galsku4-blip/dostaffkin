@@ -29,7 +29,7 @@
                 </div>
                 @if (this.routeForm.get('to')?.invalid && (this.routeForm.get('to')?.dirty ||
                 this.routeForm.get('to')?.touched)) {
-                <label for="from" class="input-error">Заполните поле Куда</label>
+                <label for="to" class="input-error">Заполните поле Куда</label>
                 }
             </div>
         </div>
@@ -108,29 +108,29 @@
                         <div>
                             @if (this.orderForm.get('phone')?.invalid && (this.orderForm.get('phone')?.dirty ||
                             this.orderForm.get('phone')?.touched)) {
-                            <label for="customerName" class="input-error">Заполните телефон</label>
+                            <label for="customerPhone" class="input-error">Заполните телефон</label>
                             }
                         </div>
                     </div>
-                    <div class="main-block-info-row extra-info">
-                        <div class="main-block-title">Дополнительная информация</div>
-                        <div class="main-field textarea">
-                            <textarea id="comment" formControlName="comment"
-                                placeholder="Детали доставки и комментарии"></textarea>
-                        </div>
+                </div>
+                <div class="main-block-info-row extra-info">
+                    <div class="main-block-title">Дополнительная информация</div>
+                    <div class="main-field textarea">
+                        <textarea id="comment" formControlName="comment"
+                            placeholder="Детали доставки и комментарии"></textarea>
                     </div>
-                    <button id="submit" class="button main-submit-request" type="button"
-                        [disabled]="!calculationResult() || orderForm.invalid" (click)="submitOrder()">Отправить
-                        заявку
-                    </button>
                 </div>
+                <button id="submit" class="button main-submit-request" type="button"
+                    [disabled]="!calculationResult() || orderForm.invalid" (click)="submitOrder()">Отправить
+                    заявку
+                </button>
+            </div>
 
-                <div class="main-order-success" id="orderSuccess" [class.is-visible]="orderId()">
-                    <div class="main-success-icon">✓</div>
-                    <div class="main-success-title">Заявка отправлена!</div>
-                    <div class="main-success-title">Номер отправления – <span id="orderId">{{orderId()}}</span></div>
-                    <div class="main-success-subtitle">Мы скоро свяжемся с вами</div>
-                </div>
+            <div class="main-order-success" id="orderSuccess" [class.is-visible]="orderId()">
+                <div class="main-success-icon">✓</div>
+                <div class="main-success-title">Заявка отправлена!</div>
+                <div class="main-success-title">Номер отправления – <span id="orderId">{{orderId()}}</span></div>
+                <div class="main-success-subtitle">Мы скоро свяжемся с вами</div>
             </div>
         </div>
     </div>
