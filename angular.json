@@ -19,7 +19,10 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "outputPath": {"base": "docs","browser": ""},
+            "outputPath": {
+              "base": "docs",
+              "browser": ""
+            },
             "baseHref": "/dostaffkin/",
             "assets": [
               {
@@ -28,7 +31,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ]
           },
           "configurations": {
